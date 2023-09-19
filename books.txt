@@ -1,0 +1,16 @@
+title: harry potter
+ pages: 320
+ author: giorgia
+ publisher: la casa
+title: i 10 comandamenti
+ pages: 10
+ author: gesu cristo
+ publisher: the god
+title: dio cane
+ pages: 1
+ author: porco
+ publisher: dio
+title: i 10 sborramenti
+ pages: 10
+ author: gesu cristo
+ publisher: porco de dio

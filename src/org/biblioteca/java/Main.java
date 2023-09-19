@@ -1,8 +1,12 @@
 package org.biblioteca.java;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
+	private static final String FILE_PATH = "C:/Boolean/books.txt";
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -40,6 +44,53 @@ public class Main {
 			}
 		}
 		sc.close();
+		
+		FileWriter infoBookWriter = null;
+		try {
+			
+			infoBookWriter = new FileWriter(FILE_PATH, true);
+	
+			for (int i = 0; i < booksCount; i++) {
+				
+				infoBookWriter.write(books[i].toString() + "\n");
+				
+//				System.out.println("Persona " + (i + 1));
+//				System.out.println("------------------");
+//				System.out.println(books[i]);
+//				System.out.println("");1
+			}
+		} catch (IOException e) {
+			
+			System.err.println("Error updating file: " + e.getMessage());
+		} finally {
+			
+			try {
+				infoBookWriter.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		File tmpFile = new File(FILE_PATH);
+		Scanner reader = null;
+		try {
+			
+			reader = new Scanner(tmpFile);
+			
+			while (reader.hasNextLine()) {
+				
+				String line = reader.nextLine();
+				System.out.println(line);
+			}
+		} catch (Exception e) { 
+		
+			System.err.println("Error reading file: " + e.getMessage());
+		} finally {
+			
+			if (reader != null)
+				reader.close();
+		}
 		
 	}
 }

@@ -69,8 +69,8 @@ public class Libro {
 	public String toString() {
 		
 		return "title: " + title +
-				" | pages: " + pages +
-				" | author: " + author +
-				" | publisher: " + publisher;
+				"\npages: " + pages +
+				"\nauthor: " + author +
+				"\npublisher: " + publisher;
 	}
 }
