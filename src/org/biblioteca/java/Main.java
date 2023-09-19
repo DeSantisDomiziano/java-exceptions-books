@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-	private static final String FILE_PATH = "C:/Boolean/books.txt";
+	private static final String FILE_PATH = "./books.txt";
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -54,10 +54,7 @@ public class Main {
 				
 				infoBookWriter.write(books[i].toString() + "\n");
 				
-//				System.out.println("Persona " + (i + 1));
-//				System.out.println("------------------");
-//				System.out.println(books[i]);
-//				System.out.println("");1
+
 			}
 		} catch (IOException e) {
 			
