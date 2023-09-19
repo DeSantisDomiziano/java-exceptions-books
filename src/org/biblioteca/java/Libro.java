@@ -7,12 +7,13 @@ public class Libro {
 	private String author;
 	private String publisher;
 	
-	public Libro(String title, int pages, String author, String publisher) {
-//		setTitle(title);
-//		setPages(pages);
-//		setAuthor(author);
-//		setPublisher(publisher);
+	public Libro(String title, int pages, String author, String publisher) throws Exception {
+		setTitle(title);
+		setPages(pages);
+		setAuthor(author);
+		setPublisher(publisher);
 	}
+	
 	//GETTER
 	public String getTitle() {
 		return title;
@@ -63,4 +64,13 @@ public class Libro {
 		this.publisher = publisher;
 	}
 	
+	
+	@Override
+	public String toString() {
+		
+		return "title: " + title +
+				" | pages: " + pages +
+				" | author: " + author +
+				" | publisher: " + publisher;
+	}
 }
